@@ -28,12 +28,23 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        Product::create($request->all());
- 
-        return redirect()->route('products')->with('success', 'Product added successfully!');
-    }
+   public function store(Request $request)
+{
+    // Validate the incoming request
+    $validated = $request->validate([
+        'title' => 'required|string|max:255',  // Ensure title is required and a string with max length of 255 characters
+        'price' => 'required|numeric',         // Ensure price is required and a number
+        'product_code' => 'required|string|max:255', // Ensure product_code is required and a string
+        'description' => 'nullable|string',    // Description is optional, but must be a string if provided
+    ]);
+
+    // Create the product with validated data
+    Product::create($validated);
+
+    // Redirect to the products list with a success message
+    return redirect()->route('products.index')->with('success', 'Product added successfully!');
+}
+
   
     /**
      * Display the specified resource.

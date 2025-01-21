@@ -11279,3 +11279,13 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
+
+.nav-item.active .nav-link {
+    background-color: #4e73df; 
+    color: white;
+}
+
+.nav-item.active .nav-link i {
+    color: white; 
+}

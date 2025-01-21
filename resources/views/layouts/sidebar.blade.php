@@ -12,13 +12,14 @@
   <hr class="sidebar-divider my-0">
   
   <!-- Nav Item - Dashboard -->
-  <li class="nav-item">
+  <li class="nav-item {{ request()->is('dashboard') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('dashboard') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
   
-  <li class="nav-item">
+  <!-- Nav Item - Product -->
+  <li class="nav-item {{ request()->is('products') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('products') }}">
       <i class="fas fa-shopping-cart"></i>
       <span>Product</span></a>
@@ -32,5 +33,5 @@
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
   </div>
   
-  
+
 </ul>

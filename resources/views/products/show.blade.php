@@ -4,7 +4,7 @@
   
 @section('contents')
     <h1 class="mb-0">Detail Product</h1>
-    <hr />
+    <hr/>
     <div class="row">
         <div class="col mb-3">
             <label class="form-label">Title</label>
@@ -25,4 +25,5 @@
             <textarea class="form-control" name="description" placeholder="Descriptoin" readonly>{{ $product->description }}</textarea>
         </div>
     </div>
+     <a href="{{ route('products')}}"><button class="btn btn-primary"> Back</button></a>
 @endsection

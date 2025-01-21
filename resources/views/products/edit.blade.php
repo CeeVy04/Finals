@@ -31,7 +31,9 @@
         <div class="row">
             <div class="d-grid">
                 <button class="btn btn-warning">Update</button>
+                <a href="{{ route('products')}}" class="btn btn-primary">Back</a>
             </div>
         </div>
-    </form>
+        </form><br>
+
 @endsection
