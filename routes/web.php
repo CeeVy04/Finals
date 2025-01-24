@@ -5,6 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ContactUs;
+use App\Http\Controllers\AboutUs;
 
 Route::get('/', function () {
     return view('auth/login');
@@ -35,4 +37,12 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+});
+
+    Route::controller(AboutUs::class)->prefix('aboutus')->group(function () {
+    Route::get('AboutUs', [AboutUs::class, 'index'])->name('aboutus');
+});
+
+    Route::controller(ContactUs::class)->prefix('contactus')->group(function () {
+    Route::get('contactus', [ContactUs::class, 'index'])->name('contactus');
 });

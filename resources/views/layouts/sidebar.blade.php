@@ -24,7 +24,22 @@
       <i class="fas fa-shopping-cart"></i>
       <span>Product</span></a>
   </li>
+
+  <li class="nav-item {{ request()->is('ContactUs') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('contactus') }}">
+      <i class="fas fa-fw fa-phone-square"></i>
+      <span>Contact Us</span></a>
+  </li>
   
+  
+  <!-- Nav Item - About -->
+  <li class="nav-item {{ request()->is('AboutUs') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('aboutus') }}">
+      <i class="fas fa-fw fa-info"></i>
+      <span>About us</span></a>
+  </li>
+
+ 
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
   

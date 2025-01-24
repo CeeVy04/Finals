@@ -3,10 +3,8 @@
 @section('title')
   
 @section('contents')
-  <div class="row">
-  	<div>
- 	   <H3>Dashboard</H3><br><span>
- 	   <p>Unfinished Dashboard</p></span>
-	</div>
-  </div>
+  <div class="d-flex align-items-center justify-content-between">
+        <h1 class="mb-0">Unfinished Dashboard!</h1>
+        <p></p>
+    </div>
 @endsection
